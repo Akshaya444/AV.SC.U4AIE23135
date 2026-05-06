@@ -131,10 +131,12 @@ export default function AllNotificationsPage() {
 
         {/* Controls */}
         <Stack
-          direction={{ xs: "column", sm: "row" }}
           spacing={2}
-          alignItems={{ sm: "center" }}
-          sx={{ mb: 3 }}
+          sx={{ 
+            flexDirection: { xs: "column", sm: "row" },
+            alignItems: { sm: "center" },
+            mb: 3 
+          }}
         >
           {/* Type filter */}
           <ToggleButtonGroup

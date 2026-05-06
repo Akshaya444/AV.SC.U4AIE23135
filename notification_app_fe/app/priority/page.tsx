@@ -199,10 +199,12 @@ export default function PriorityInboxPage() {
 
         {/* ── Controls ── */}
         <Stack
-          direction={{ xs: "column", md: "row" }}
           spacing={3}
-          alignItems={{ md: "center" }}
-          sx={{ mb: 3 }}
+          sx={{ 
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: { md: "center" },
+            mb: 3 
+          }}
         >
           {/* Type filter */}
           <ToggleButtonGroup
