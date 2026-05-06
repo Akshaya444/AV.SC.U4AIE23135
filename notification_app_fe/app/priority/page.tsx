@@ -66,7 +66,7 @@ export default function PriorityInboxPage() {
     setError(null);
     try {
       // Fetch a large batch so we can rank client-side (matches Stage 1 logic)
-      const data = await fetchNotifications({ limit: 100 });
+      const data = await fetchNotifications({ limit: 10 });
       setAllNotifications(data);
       setLastFetched(new Date());
     } catch (err: unknown) {
@@ -245,13 +245,11 @@ export default function PriorityInboxPage() {
             <Slider
               value={topN}
               min={5}
-              max={20}
-              step={5}
+              max={10}
+              step={1}
               marks={[
                 { value: 5, label: "5" },
                 { value: 10, label: "10" },
-                { value: 15, label: "15" },
-                { value: 20, label: "20" },
               ]}
               onChange={(_, val) => setTopN(val as number)}
               sx={{
