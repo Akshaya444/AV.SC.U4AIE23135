@@ -170,7 +170,7 @@ export default function PriorityInboxPage() {
               How priority is scored
             </Typography>
           </Box>
-          <Stack direction="row" spacing={1.5} flexWrap="wrap" useFlexGap>
+          <Stack direction="row" spacing={1.5} useFlexGap sx={{ flexWrap: "wrap" }}>
             {(["Placement", "Result", "Event"] as const).map((type) => (
               <Chip
                 key={type}
